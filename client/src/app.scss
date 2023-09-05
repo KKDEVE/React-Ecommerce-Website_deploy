@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Libre+Baskerville&family=Montserrat&family=Roboto&family=Source+Sans+3&display=swap');
+
+$title-ff: 'Libre Baskerville', serif;
+$text-ff: 'Source Sans 3', sans-serif;
+
+// font size //
+//mobile
+$fs-title-m: 1.2rem;
+$fs-text-m: 0.5rem;
+
+//mobile-m
+$fs-title-m-m: 1.2rem;
+$fs-text-m-m: 0.5rem;
+
+//tablet
+$fs-title-t: 1.3rem;
+$fs-text-t: 0.5rem;
+
+.app {
+
+    .link {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin mobile-m {
+    @media (min-width: 601px) and (max-width: 895px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 896px) and (max-width: 1200px) {
+        @content;
+    }
+}
+
+
+// @mixin tablet {
+//     @media (max-width: 1100px) {
+//         @content;
+//     }
+// }

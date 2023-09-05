@@ -1,0 +1,82 @@
+@import "./src/app.scss";
+
+.featuredProducts {
+    margin: 100px 200px;
+
+    @include mobile {
+        margin: 4rem 20px;
+    }
+
+    @include mobile-m {
+        margin: 4rem 20px;
+    }
+
+    @include tablet {
+        margin: 4rem 10rem;
+    }
+
+    .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        @include tablet {
+            gap: 2rem;
+        }
+
+        h1 {
+            flex: 2;
+            text-transform: capitalize;
+
+            @include mobile {
+                font-size: $fs-title-m;
+            }
+
+            @include mobile-m {
+                font-size: $fs-title-m-m;
+            }
+
+            @include tablet {
+                font-size: $fs-title-t;
+
+            }
+        }
+
+        p {
+            flex: 3;
+            color: gray;
+
+            @include mobile {
+                font-size: $fs-text-m;
+            }
+
+            @include mobile {
+                font-size: $fs-text-t;
+            }
+
+        }
+    }
+
+    .bottom {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+
+        @include mobile {
+            gap: 1rem;
+        }
+
+        @include mobile-m {
+            gap: 1rem;
+        }
+    }
+
+
+}

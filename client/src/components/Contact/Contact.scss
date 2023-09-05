@@ -1,0 +1,85 @@
+@import "./src/app.scss";
+
+.contact {
+    background-color: #e6d5bf;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+
+    @include mobile {
+        padding: 0.5rem;
+    }
+
+    .wrapper {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include mobile {
+            width: 80%;
+
+            span {
+                font-size: $fs-text-m;
+            }
+        }
+
+        @include mobile-m {
+            width: 60%;
+
+            span {
+                font-size: $fs-text-m-m;
+            }
+        }
+
+        @include tablet {
+            width: 70%;
+        }
+
+        input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+
+            @include mobile {
+                padding: .2rem;
+            }
+
+            @include mobile-m {
+                padding: .2rem;
+            }
+        }
+
+        button {
+            padding: 10px;
+            color: white;
+            background: #333;
+            border-radius: 0 5px 5px 0;
+            border: none;
+
+            @include mobile {
+                padding: .2rem;
+                font-size: $fs-text-m;
+            }
+
+            @include mobile-m {
+                padding: .2rem;
+                font-size: $fs-text-m;
+            }
+        }
+
+        .icons {
+            display: flex;
+            gap: 10px;
+
+            @include mobile {
+                display: none;
+            }
+
+            @include mobile-m {
+                display: none;
+            }
+        }
+    }
+}

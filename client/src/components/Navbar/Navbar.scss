@@ -1,0 +1,169 @@
+@import "./src/app.scss";
+
+.navbar {
+    height: 80px;
+
+    .mobile-nav {
+        display: none;
+
+        .mobile-ham {
+            position: absolute;
+            top: 1.8rem;
+            right: 2.5rem;
+
+        }
+
+        @include mobile {
+            display: flex;
+            position: absolute;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            background-color: #c5a67f;
+            width: 100%;
+            border-radius: 0 0 1rem 1rem;
+
+            .mobile-menu {
+                display: flex;
+                margin: 3rem 0;
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+            }
+        }
+
+    }
+
+    .wrapper {
+        padding: 10px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include mobile {
+            padding: 1.5rem 1rem;
+        }
+
+        @include mobile-m {
+            padding: 1.5rem 1rem;
+        }
+
+        @include tablet {
+            padding: 1rem .5rem;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-family: $text-ff;
+
+
+
+            @include tablet {
+                font-size: 1rem;
+            }
+
+            @include mobile-m {
+                font-size: .9rem;
+            }
+
+        }
+
+        .left {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+
+            @include mobile {
+                display: none;
+            }
+
+            @include mobile-m {
+
+                margin-left: 5%;
+
+                >.item:nth-child(-n + 2) {
+                    display: none;
+
+                }
+            }
+
+            @include tablet {
+                gap: 10px;
+            }
+
+
+        }
+
+        .center {
+            font-size: 30px;
+            letter-spacing: 2px;
+            font-family: $title-ff;
+
+            @include tablet {
+                font-size: 1.5rem;
+            }
+
+            @include mobile-m {
+                font-size: 1.2rem;
+            }
+
+            @include mobile {
+                font-size: 1rem;
+                margin-left: 2rem;
+            }
+
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+
+            @include mobile {
+                display: none;
+            }
+
+            // @include mobile-m {
+            //     gap: 3px;
+            // }
+
+            @include tablet {
+                gap: 10px;
+            }
+
+            .icons {
+                display: flex;
+                gap: 15px;
+                color: #777;
+                cursor: pointer;
+
+                @include mobile-m {
+                    display: none;
+                }
+
+                .cartIcon {
+                    position: relative;
+
+                    span {
+                        font-size: 12px;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        background-color: #e6d5bf;
+                        color: white;
+                        position: absolute;
+                        right: -10px;
+                        top: -10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}
